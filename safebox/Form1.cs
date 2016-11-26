@@ -82,6 +82,7 @@ namespace safebox
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            metroToggle3.Checked = false;
             Application.Exit();
         }
         
