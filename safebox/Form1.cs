@@ -15,7 +15,12 @@ namespace safebox
         public Form1()
         {
             InitializeComponent();
+
+            this.notifyIcon1.BalloonTipText = "hello";
+            this.notifyIcon1.ShowBalloonTip(1000);
         }
+
+        
 
         private void metroLabel1_Click(object sender, EventArgs e)
         {
@@ -44,6 +49,26 @@ namespace safebox
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
