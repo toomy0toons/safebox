@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Threading;
 
 namespace safebox
 {
@@ -15,18 +17,10 @@ namespace safebox
         public Form1()
         {
             InitializeComponent();
-
-            this.notifyIcon1.BalloonTipText = "hello";
-            this.notifyIcon1.ShowBalloonTip(1000);
+            
         }
-
-        
 
         private void metroLabel1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
@@ -36,7 +30,37 @@ namespace safebox
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+        }
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void metroToggle2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroToggle3_CheckedChanged(object sender, EventArgs e)
+        {
+            Calnet calnett = new Calnet();
+            Thread t1 = new Thread(() => calnett.CalnetProc(metroTextBox2, metroToggle3));
+
+            if (this.metroToggle3.Checked == true)
+            {
+                t1.Start();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void metroToggle4_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -54,21 +78,65 @@ namespace safebox
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        
+
+    }
+    
+    public class Calnet
+    {
+        public void CalnetProc(MetroFramework.Controls.MetroTextBox abc, MetroFramework.Controls.MetroToggle tg)
+        {
+            PerformanceCounterCategory performanceCounterCategory = new PerformanceCounterCategory("Network Interface");
+            string[] instances = performanceCounterCategory.GetInstanceNames();
+
+            List<PerformanceCounter> pcarr1 = new List<PerformanceCounter>();
+            List<PerformanceCounter> pcarr2 = new List<PerformanceCounter>();
+
+            foreach (string name in instances)
+            {
+                PerformanceCounter performanceCounterSent = new PerformanceCounter("Network Interface", "Bytes Sent/sec", name);
+                PerformanceCounter performanceCounterReceived = new PerformanceCounter("Network Interface", "Bytes Received/sec", name);
+                pcarr1.Add(performanceCounterSent);
+                pcarr2.Add(performanceCounterReceived);
+            }
+
+            double sum_s = 0;
+            double sum_r = 0;
+            string return_s = "";
+            int sum_s_i = 0;
+            int sum_r_i = 0;
+
+            while(true)
+            {
+                if (tg.Checked == false)
+                {
+                    abc.Text = "NETWORK DETECTION OFF, SIR HEEJO.";
+                    Thread.CurrentThread.Interrupt();
+                    Thread.CurrentThread.Abort();
+                    break;
+                }
+                sum_s = 0;
+                sum_r = 0;
+                foreach (PerformanceCounter instance in pcarr1)
+                {
+                    sum_s += instance.NextValue();
+                }
+                foreach (PerformanceCounter instance in pcarr2)
+                {
+                    sum_r += instance.NextValue();
+                }
+                sum_s_i = (int)(sum_s / 1024);
+                sum_r_i = (int)(sum_r / 1024);
+                return_s = "sent: " + (sum_s_i).ToString() + "KB \nreceived: " + (sum_r_i).ToString() + "KB";
+                abc.Text = return_s;
+                System.Threading.Thread.Sleep(1000);
+            }
         }
     }
 }

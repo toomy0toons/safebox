@@ -30,40 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroToggle2 = new MetroFramework.Controls.MetroToggle();
+            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroToggle3 = new MetroFramework.Controls.MetroToggle();
+            this.metroToggle4 = new MetroFramework.Controls.MetroToggle();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroToggle4 = new MetroFramework.Controls.MetroToggle();
+            this.metroToggle3 = new MetroFramework.Controls.MetroToggle();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroToggle1
-            // 
-            this.metroToggle1.AutoSize = true;
-            this.metroToggle1.Location = new System.Drawing.Point(111, 160);
-            this.metroToggle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.metroToggle1.Name = "metroToggle1";
-            this.metroToggle1.Size = new System.Drawing.Size(80, 29);
-            this.metroToggle1.TabIndex = 0;
-            this.metroToggle1.Text = "Off";
-            this.metroToggle1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle1.UseVisualStyleBackColor = true;
-            this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
-            // 
             // metroToggle2
             // 
             this.metroToggle2.AutoSize = true;
-            this.metroToggle2.Location = new System.Drawing.Point(112, 109);
-            this.metroToggle2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroToggle2.Location = new System.Drawing.Point(112, 160);
+            this.metroToggle2.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle2.Name = "metroToggle2";
             this.metroToggle2.Size = new System.Drawing.Size(80, 29);
             this.metroToggle2.TabIndex = 0;
@@ -71,6 +58,19 @@
             this.metroToggle2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroToggle2.UseVisualStyleBackColor = true;
             this.metroToggle2.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
+            // 
+            // metroToggle1
+            // 
+            this.metroToggle1.AutoSize = true;
+            this.metroToggle1.Location = new System.Drawing.Point(112, 109);
+            this.metroToggle1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroToggle1.Name = "metroToggle1";
+            this.metroToggle1.Size = new System.Drawing.Size(80, 29);
+            this.metroToggle1.TabIndex = 0;
+            this.metroToggle1.Text = "Off";
+            this.metroToggle1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToggle1.UseVisualStyleBackColor = true;
+            this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
             // 
             // metroTile1
             // 
@@ -80,7 +80,7 @@
             this.metroTile1.CustomForeColor = true;
             this.metroTile1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroTile1.Location = new System.Drawing.Point(42, 96);
-            this.metroTile1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(47, 45);
             this.metroTile1.TabIndex = 1;
@@ -92,7 +92,7 @@
             // metroTile2
             // 
             this.metroTile2.Location = new System.Drawing.Point(24, 86);
-            this.metroTile2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(187, 115);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Black;
@@ -106,7 +106,7 @@
             this.metroTile3.CustomForeColor = true;
             this.metroTile3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroTile3.Location = new System.Drawing.Point(42, 140);
-            this.metroTile3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(50, 56);
             this.metroTile3.TabIndex = 1;
@@ -116,24 +116,25 @@
             // 
             // metroTile4
             // 
-            this.metroTile4.Location = new System.Drawing.Point(24, 188);
-            this.metroTile4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile4.Location = new System.Drawing.Point(24, 193);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(187, 105);
+            this.metroTile4.Size = new System.Drawing.Size(187, 100);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTile4.TabIndex = 2;
             // 
-            // metroToggle3
+            // metroToggle4
             // 
-            this.metroToggle3.AutoSize = true;
-            this.metroToggle3.Location = new System.Drawing.Point(111, 262);
-            this.metroToggle3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.metroToggle3.Name = "metroToggle3";
-            this.metroToggle3.Size = new System.Drawing.Size(80, 29);
-            this.metroToggle3.TabIndex = 0;
-            this.metroToggle3.Text = "Off";
-            this.metroToggle3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle3.UseVisualStyleBackColor = true;
+            this.metroToggle4.AutoSize = true;
+            this.metroToggle4.Location = new System.Drawing.Point(112, 262);
+            this.metroToggle4.Margin = new System.Windows.Forms.Padding(2);
+            this.metroToggle4.Name = "metroToggle4";
+            this.metroToggle4.Size = new System.Drawing.Size(80, 29);
+            this.metroToggle4.TabIndex = 0;
+            this.metroToggle4.Text = "Off";
+            this.metroToggle4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToggle4.UseVisualStyleBackColor = true;
+            this.metroToggle4.CheckedChanged += new System.EventHandler(this.metroToggle4_CheckedChanged);
             // 
             // metroTile5
             // 
@@ -142,7 +143,7 @@
             this.metroTile5.CustomForeColor = true;
             this.metroTile5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroTile5.Location = new System.Drawing.Point(42, 198);
-            this.metroTile5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(47, 45);
             this.metroTile5.TabIndex = 1;
@@ -157,7 +158,7 @@
             this.metroTile6.CustomForeColor = true;
             this.metroTile6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroTile6.Location = new System.Drawing.Point(42, 242);
-            this.metroTile6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile6.Name = "metroTile6";
             this.metroTile6.Size = new System.Drawing.Size(50, 56);
             this.metroTile6.TabIndex = 1;
@@ -165,18 +166,18 @@
             this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.UseTileImage = true;
             // 
-            // metroToggle4
+            // metroToggle3
             // 
-            this.metroToggle4.AutoSize = true;
-            this.metroToggle4.Location = new System.Drawing.Point(112, 212);
-            this.metroToggle4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.metroToggle4.Name = "metroToggle4";
-            this.metroToggle4.Size = new System.Drawing.Size(80, 29);
-            this.metroToggle4.TabIndex = 0;
-            this.metroToggle4.Text = "Off";
-            this.metroToggle4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle4.UseVisualStyleBackColor = true;
-            this.metroToggle4.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
+            this.metroToggle3.AutoSize = true;
+            this.metroToggle3.Location = new System.Drawing.Point(112, 212);
+            this.metroToggle3.Margin = new System.Windows.Forms.Padding(2);
+            this.metroToggle3.Name = "metroToggle3";
+            this.metroToggle3.Size = new System.Drawing.Size(80, 29);
+            this.metroToggle3.TabIndex = 0;
+            this.metroToggle3.Text = "Off";
+            this.metroToggle3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToggle3.UseVisualStyleBackColor = true;
+            this.metroToggle3.CheckedChanged += new System.EventHandler(this.metroToggle3_CheckedChanged);
             // 
             // metroTextBox1
             // 
@@ -187,7 +188,7 @@
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.metroTextBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroTextBox1.Location = new System.Drawing.Point(17, 25);
+            this.metroTextBox1.Location = new System.Drawing.Point(17, 30);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(208, 44);
@@ -202,10 +203,10 @@
             // metroTextBox2
             // 
             this.metroTextBox2.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.metroTextBox2.Location = new System.Drawing.Point(1, 332);
+            this.metroTextBox2.Location = new System.Drawing.Point(5, 327);
             this.metroTextBox2.Margin = new System.Windows.Forms.Padding(0);
             this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(247, 51);
+            this.metroTextBox2.Size = new System.Drawing.Size(233, 51);
             this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTextBox2.TabIndex = 4;
             this.metroTextBox2.Text = "카메라가 켜졌습니다.";
@@ -239,23 +240,23 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.metroToggle4);
-            this.Controls.Add(this.metroToggle2);
+            this.Controls.Add(this.metroToggle3);
+            this.Controls.Add(this.metroToggle1);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile5);
-            this.Controls.Add(this.metroToggle3);
+            this.Controls.Add(this.metroToggle4);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroToggle1);
+            this.Controls.Add(this.metroToggle2);
             this.Controls.Add(this.metroTile2);
             this.DisplayHeader = false;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(17, 25, 17, 17);
+            this.Padding = new System.Windows.Forms.Padding(17, 30, 17, 17);
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -268,16 +269,16 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroToggle metroToggle1;
         private MetroFramework.Controls.MetroToggle metroToggle2;
+        private MetroFramework.Controls.MetroToggle metroToggle1;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroToggle metroToggle3;
+        private MetroFramework.Controls.MetroToggle metroToggle4;
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroToggle metroToggle4;
+        private MetroFramework.Controls.MetroToggle metroToggle3;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
