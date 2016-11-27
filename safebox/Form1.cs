@@ -109,7 +109,7 @@ namespace safebox
             if (this.metroToggle1.Checked == true)
             {
                 string return_s = Devcontest("enable =image");
-                notifyIcon1.ShowBalloonTip(2000, "Warning", "Webcam can be used", ToolTipIcon.Warning);
+                notifyIcon1.ShowBalloonTip(2000, "WARNING", "Webcam can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -122,7 +122,7 @@ namespace safebox
             if (this.metroToggle2.Checked == true)
             {
                 string return_s = Devcontest("enable =audio");
-                notifyIcon1.ShowBalloonTip(2000, "warning", "Audio can be used", ToolTipIcon.Warning);
+                notifyIcon1.ShowBalloonTip(2000, "WARNING", "Audio can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -150,7 +150,7 @@ namespace safebox
             if (metroToggle4.Checked == true)
             {
                 Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
-                notifyIcon1.ShowBalloonTip(2000, "warning", "USB Storage can be used", ToolTipIcon.Warning);
+                notifyIcon1.ShowBalloonTip(2000, "WARNING", "USB Storage can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -226,7 +226,7 @@ namespace safebox
                 sum_s_i = (int)(sum_s / 1024);
                 sum_r_i = (int)(sum_r / 1024);
                 if (sum_s_i > 1024)
-                    nf.ShowBalloonTip(2000, "warning", "1111", ToolTipIcon.Warning);
+                    nf.ShowBalloonTip(2000, "WARNING", "Send data over 1MB", ToolTipIcon.Warning);
                 return_s = "sent: " + (sum_s_i).ToString() + "KB \nreceived: " + (sum_r_i).ToString() + "KB";
                 abc.Text = return_s;
                 System.Threading.Thread.Sleep(1000);
