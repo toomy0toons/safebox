@@ -109,7 +109,7 @@ namespace safebox
             if (this.metroToggle1.Checked == true)
             {
                 string return_s = Devcontest("enable =image");
-                notifyIcon1.ShowBalloonTip(2000, "warning", "Webcam can be used", ToolTipIcon.Warning);
+                notifyIcon1.ShowBalloonTip(2000, "Warning", "Webcam can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -133,7 +133,7 @@ namespace safebox
         private void metroToggle3_CheckedChanged(object sender, EventArgs e)
         {
             Calnet calnett = new Calnet();
-            Thread t1 = new Thread(() => calnett.CalnetProc(metroTextBox2, metroToggle3));
+            Thread t1 = new Thread(() => calnett.CalnetProc(metroTextBox2, metroToggle3, notifyIcon1));
 
             if (this.metroToggle3.Checked == true)
             {
@@ -182,7 +182,7 @@ namespace safebox
     
     public class Calnet
     {
-        public void CalnetProc(MetroFramework.Controls.MetroTextBox abc, MetroFramework.Controls.MetroToggle tg)
+        public void CalnetProc(MetroFramework.Controls.MetroTextBox abc, MetroFramework.Controls.MetroToggle tg, NotifyIcon nf)
         {
             PerformanceCounterCategory performanceCounterCategory = new PerformanceCounterCategory("Network Interface");
             string[] instances = performanceCounterCategory.GetInstanceNames();
@@ -208,7 +208,7 @@ namespace safebox
             {
                 if (tg.Checked == false)
                 {
-                    abc.Text = "NETWORK DETECTION OFF, SIR HEEJO.";
+                    abc.Text = "NETWORK DETECTION OFF";
                     Thread.CurrentThread.Interrupt();
                     Thread.CurrentThread.Abort();
                     break;
@@ -225,6 +225,8 @@ namespace safebox
                 }
                 sum_s_i = (int)(sum_s / 1024);
                 sum_r_i = (int)(sum_r / 1024);
+                if (sum_s_i > 1024)
+                    nf.ShowBalloonTip(2000, "warning", "1111", ToolTipIcon.Warning);
                 return_s = "sent: " + (sum_s_i).ToString() + "KB \nreceived: " + (sum_r_i).ToString() + "KB";
                 abc.Text = return_s;
                 System.Threading.Thread.Sleep(1000);
