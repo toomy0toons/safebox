@@ -81,6 +81,79 @@ namespace safebox
             }
         }
 
+        public string ParseExe(string filename, string arg)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = filename;
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.Arguments = arg;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.Verb = "runas";
+
+            process.Start();
+
+            // Synchronously read the standard output of the spawned process. 
+            StreamReader reader = process.StandardOutput;
+            string output = reader.ReadToEnd();
+
+            // Write the redirected output to this application's window.
+            // Console.WriteLine(output);
+            process.WaitForExit();
+            process.Close();
+
+            //Console.WriteLine("\n\nPress any key to exit.");
+            //Console.ReadLine();
+            return output;
+        }
+
+        public static string getBetween(string strSource, string strStart, string strEnd)
+        {
+            int Start, End;
+            if (strSource.Contains(strStart) && strSource.Contains(strEnd))
+            {
+                Start = strSource.IndexOf(strStart, 0) + strStart.Length;
+                End = strSource.IndexOf(strEnd, Start);
+                return strSource.Substring(Start, End - Start);
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private void CheckCamera()
+        {
+            string parseString = ParseExe("handle.exe", @"-a USB#VID");
+
+            string result;
+            //extract substring
+
+            if (parseString.Contains("No matching handles found."))
+            {
+                result = "발견되지 않았습니다.";
+            }
+            else
+            {
+                int pFrom = parseString.IndexOf(".com");
+                int pTo = parseString.IndexOf(".exe");
+
+
+                //metroTextBox2.AppendText("pFrom = " + pFrom.ToString());
+                //metroTextBox2.AppendText("\npTo = " + pTo.ToString());
+
+                metroTextBox2.AppendText(parseString.Contains(".exe").ToString());
+
+                result = getBetween(parseString, ".com", "type");
+            }
+
+            metroTextBox2.Text = "카메라 사용 감지\n" +result;
+            //metroTextBox2.Text = parseString;
+
+
+        }
+
+
         private bool IsRunAsAdministrator()
         {
             var wi = System.Security.Principal.WindowsIdentity.GetCurrent();
@@ -160,7 +233,8 @@ namespace safebox
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-
+            metroTextBox2.Text = "카메라를 사용하는 앱 검색중...";
+            CheckCamera();
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
