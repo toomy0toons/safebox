@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.IO;
 
 namespace safebox
 {
@@ -18,6 +19,73 @@ namespace safebox
         {
             InitializeComponent();
             
+        }
+
+        public string Devcontest(string arg)
+        {
+            if (!IsRunAsAdministrator())
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "devcon.exe";
+                process.StartInfo.Arguments = arg;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.Verb = "runas";
+
+                try
+                {
+                    process.Start();
+                }
+                catch (Exception)
+                {
+                    return "admin error";
+                }
+
+                // Synchronously the standard output of the spawned process. 
+                StreamReader reader = process.StandardOutput;
+                string output = reader.ReadToEnd();
+
+                // Write the redirected output to this application's window.
+                // Console.WriteLine(output);
+                process.WaitForExit();
+                process.Close();
+
+                //Console.WriteLine("\n\nPress any key to exit.");
+                //Console.ReadLine();
+                return output;
+            }
+            else
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "devcon.exe";
+                process.StartInfo.Arguments = arg;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.Verb = "runas";
+
+                process.Start();
+
+                // Synchronously read the standard output of the spawned process. 
+                StreamReader reader = process.StandardOutput;
+                string output = reader.ReadToEnd();
+
+                // Write the redirected output to this application's window.
+                // Console.WriteLine(output);
+                process.WaitForExit();
+                process.Close();
+
+                //Console.WriteLine("\n\nPress any key to exit.");
+                //Console.ReadLine();
+                return output;
+            }
+        }
+
+        private bool IsRunAsAdministrator()
+        {
+            var wi = System.Security.Principal.WindowsIdentity.GetCurrent();
+            var wp = new System.Security.Principal.WindowsPrincipal(wi);
+
+            return wp.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator);
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
