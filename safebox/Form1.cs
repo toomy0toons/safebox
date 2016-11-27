@@ -121,12 +121,12 @@ namespace safebox
         {
             if (this.metroToggle2.Checked == true)
             {
-                string return_s = Devcontest("enable =audio");
+                string return_s = Devcontest("enable =media");
                 notifyIcon1.ShowBalloonTip(2000, "WARNING", "Audio can be used", ToolTipIcon.Warning);
             }
             else
             {
-                string return_s = Devcontest("disable =audio");
+                string return_s = Devcontest("disable =media");
             }
         }
 
