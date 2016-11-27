@@ -50,12 +50,14 @@
             // metroToggle2
             // 
             this.metroToggle2.AutoSize = true;
+            this.metroToggle2.Checked = true;
+            this.metroToggle2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.metroToggle2.Location = new System.Drawing.Point(112, 160);
             this.metroToggle2.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle2.Name = "metroToggle2";
             this.metroToggle2.Size = new System.Drawing.Size(80, 29);
             this.metroToggle2.TabIndex = 0;
-            this.metroToggle2.Text = "Off";
+            this.metroToggle2.Text = "On";
             this.metroToggle2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroToggle2.UseVisualStyleBackColor = true;
             this.metroToggle2.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
@@ -63,12 +65,14 @@
             // metroToggle1
             // 
             this.metroToggle1.AutoSize = true;
+            this.metroToggle1.Checked = true;
+            this.metroToggle1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.metroToggle1.Location = new System.Drawing.Point(112, 109);
             this.metroToggle1.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 29);
             this.metroToggle1.TabIndex = 0;
-            this.metroToggle1.Text = "Off";
+            this.metroToggle1.Text = "On";
             this.metroToggle1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroToggle1.UseVisualStyleBackColor = true;
             this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
@@ -127,12 +131,14 @@
             // metroToggle4
             // 
             this.metroToggle4.AutoSize = true;
+            this.metroToggle4.Checked = true;
+            this.metroToggle4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.metroToggle4.Location = new System.Drawing.Point(112, 262);
             this.metroToggle4.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle4.Name = "metroToggle4";
             this.metroToggle4.Size = new System.Drawing.Size(80, 29);
             this.metroToggle4.TabIndex = 0;
-            this.metroToggle4.Text = "Off";
+            this.metroToggle4.Text = "On";
             this.metroToggle4.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroToggle4.UseVisualStyleBackColor = true;
             this.metroToggle4.CheckedChanged += new System.EventHandler(this.metroToggle4_CheckedChanged);
