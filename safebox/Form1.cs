@@ -106,9 +106,10 @@ namespace safebox
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.metroToggle3.Checked == true)
+            if (this.metroToggle1.Checked == true)
             {
                 string return_s = Devcontest("enable =image");
+                notifyIcon1.ShowBalloonTip(2000, "warning", "Webcam can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -118,9 +119,10 @@ namespace safebox
 
         private void metroToggle2_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.metroToggle3.Checked == true)
+            if (this.metroToggle2.Checked == true)
             {
                 string return_s = Devcontest("enable =audio");
+                notifyIcon1.ShowBalloonTip(2000, "warning", "Audio can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -148,6 +150,7 @@ namespace safebox
             if (metroToggle4.Checked == true)
             {
                 Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                notifyIcon1.ShowBalloonTip(2000, "warning", "USB Storage can be used", ToolTipIcon.Warning);
             }
             else
             {
@@ -175,8 +178,6 @@ namespace safebox
             metroToggle3.Checked = false;
             Application.Exit();
         }
-        
-
     }
     
     public class Calnet

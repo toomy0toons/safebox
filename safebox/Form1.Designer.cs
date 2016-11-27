@@ -44,6 +44,7 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // metroToggle2
@@ -209,7 +210,7 @@
             this.metroTextBox2.Size = new System.Drawing.Size(233, 51);
             this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTextBox2.TabIndex = 4;
-            this.metroTextBox2.Text = "카메라가 켜졌습니다.";
+            this.metroTextBox2.Text = "이힁~좋아!♥";
             this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // notifyIcon1
@@ -283,6 +284,7 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
