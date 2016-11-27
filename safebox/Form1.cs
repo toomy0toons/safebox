@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
@@ -105,12 +106,26 @@ namespace safebox
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (this.metroToggle3.Checked == true)
+            {
+                string return_s = Devcontest("enable =image");
+            }
+            else
+            {
+                string return_s = Devcontest("disable =image");
+            }
         }
 
         private void metroToggle2_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (this.metroToggle3.Checked == true)
+            {
+                string return_s = Devcontest("enable =audio");
+            }
+            else
+            {
+                string return_s = Devcontest("disable =audio");
+            }
         }
 
         private void metroToggle3_CheckedChanged(object sender, EventArgs e)
@@ -130,7 +145,14 @@ namespace safebox
 
         private void metroToggle4_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (metroToggle4.Checked == true)
+            {
+                Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+            }
+            else
+            {
+                Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+            }
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
