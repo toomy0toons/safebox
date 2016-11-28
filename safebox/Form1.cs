@@ -89,7 +89,7 @@ namespace safebox
             process.StartInfo.Arguments = arg;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.Verb = "runas";
+            process.StartInfo.Verb = "";
 
             process.Start();
 
@@ -131,24 +131,33 @@ namespace safebox
 
             if (parseString.Contains("No matching handles found."))
             {
-                result = "발견되지 않았습니다.";
+                metroTextBox2.Text = "발견되지 않았습니다.";
             }
             else
             {
-                int pFrom = parseString.IndexOf(".com");
-                int pTo = parseString.IndexOf(".exe");
+                if (!parseString.Contains(".exe"))
+                {
+                    metroTextBox2.Text = "발견되지 않았습니다.";
+                }
+                else
+                {
+                    int p1 = parseString.IndexOf(".exe");
+                    int pFrom = parseString.LastIndexOf("}", p1) + 1;
+                    int pEnd = parseString.IndexOf("type", pFrom);
+
+                    //metroTextBox2.AppendText("pFrom = " + pFrom.ToString());
+                    //metroTextBox2.AppendText("\npTo = " + pTo.ToString());
+
+                    metroTextBox2.AppendText(parseString.Contains(".exe").ToString());
+
+                    result = parseString.Substring(pFrom, pEnd - pFrom);
 
 
-                //metroTextBox2.AppendText("pFrom = " + pFrom.ToString());
-                //metroTextBox2.AppendText("\npTo = " + pTo.ToString());
-
-                metroTextBox2.AppendText(parseString.Contains(".exe").ToString());
-
-                result = getBetween(parseString, ".com", "type");
+                    metroTextBox2.Text = "카메라 사용 감지\n" + result;
+                    //metroTextBox2.Text = parseString;
+                }
             }
-
-            metroTextBox2.Text = "카메라 사용 감지\n" +result;
-            //metroTextBox2.Text = parseString;
+            
 
 
         }
