@@ -134,35 +134,43 @@ namespace safebox
         {
             string parseString = ParseExe("handle.exe", @"-a USB#VID");
 
-            string result;
             //extract substring
 
             if (parseString.Contains("No matching handles found."))
             {
-                metroTextBox2.Text = "발견되지 않았습니다.";
+
+                notifyIcon1.ShowBalloonTip(2000, "WARNING", "발견되지 않았습니다", ToolTipIcon.Warning);
             }
             else
             {
                 if (!parseString.Contains(".exe"))
                 {
-                    metroTextBox2.Text = "발견되지 않았습니다.";
+                    notifyIcon1.ShowBalloonTip(2000, "WARNING", "발견되지 않았습니다", ToolTipIcon.Warning);
                 }
                 else
                 {
-                    int p1 = parseString.IndexOf(".exe");
-                    int pFrom = parseString.LastIndexOf("}", p1) + 1;
-                    int pEnd = parseString.IndexOf("type", pFrom);
 
-                    //metroTextBox2.AppendText("pFrom = " + pFrom.ToString());
-                    //metroTextBox2.AppendText("\npTo = " + pTo.ToString());
+                    metroTextBox2.Text = "카메라 사용 감지\n";
+                    string[] lines = parseString.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+                    string duple = "";
 
-                    metroTextBox2.AppendText(parseString.Contains(".exe").ToString());
+                    System.Text.StringBuilder result = new System.Text.StringBuilder();
+                    foreach (string line in lines){               
+                        if (line.Contains("type: Key")){
 
-                    result = parseString.Substring(pFrom, pEnd - pFrom);
+                            int p2 = line.IndexOf("type");
+                            string addLine = line.Substring(0, p2) + "\n";
+                            if (duple == addLine)
+                            {
+                                continue;
+                            }
+                            result.Append(addLine);
+                            duple = addLine;
+                        }
+                    }
 
+                    notifyIcon1.ShowBalloonTip(1000, "카메라를 사용중인 프로세스", result.ToString(), ToolTipIcon.Warning);
 
-                    metroTextBox2.Text = "카메라 사용 감지\n" + result;
-                    //metroTextBox2.Text = parseString;
                 }
             }
             
