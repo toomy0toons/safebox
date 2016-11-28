@@ -31,6 +31,7 @@ namespace safebox
                 process.StartInfo.Arguments = arg;
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.Verb = "runas";
 
                 try
@@ -195,6 +196,7 @@ namespace safebox
             }
             else
             {
+                notifyIcon1.ShowBalloonTip(2000, "SAFEBOX", "Webcam can't be used", ToolTipIcon.Warning);
                 string return_s = Devcontest("disable =image");
             }
         }
@@ -209,6 +211,8 @@ namespace safebox
             else
             {
                 string return_s = Devcontest("disable =media");
+                notifyIcon1.ShowBalloonTip(2000, "SAFEBOX", "Audio can't be used", ToolTipIcon.Warning);
+
             }
         }
 
@@ -223,7 +227,7 @@ namespace safebox
             }
             else
             {
-
+                notifyIcon1.ShowBalloonTip(2000, "SAFEBOX", "Network Detection OFF", ToolTipIcon.Warning);
             }
         }
 
@@ -237,6 +241,8 @@ namespace safebox
             else
             {
                 Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+                notifyIcon1.ShowBalloonTip(2000, "SAFEBOX", "USB Storage can't be used", ToolTipIcon.Warning);
+
             }
         }
 
