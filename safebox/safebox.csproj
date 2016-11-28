@@ -105,6 +105,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="devcon.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="handle.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
