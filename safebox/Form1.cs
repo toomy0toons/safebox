@@ -16,8 +16,6 @@ namespace safebox
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        private System.Windows.Forms.ContextMenu contextMenu1;
-        private System.Windows.Forms.MenuItem menuItem1;
         public Form1()
         {   
             InitializeComponent();
