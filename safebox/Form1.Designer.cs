@@ -52,10 +52,10 @@
             this.metroToggle2.AutoSize = true;
             this.metroToggle2.Checked = true;
             this.metroToggle2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggle2.Location = new System.Drawing.Point(134, 192);
+            this.metroToggle2.Location = new System.Drawing.Point(112, 160);
             this.metroToggle2.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle2.Name = "metroToggle2";
-            this.metroToggle2.Size = new System.Drawing.Size(80, 33);
+            this.metroToggle2.Size = new System.Drawing.Size(80, 29);
             this.metroToggle2.TabIndex = 0;
             this.metroToggle2.Text = "On";
             this.metroToggle2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -67,10 +67,10 @@
             this.metroToggle1.AutoSize = true;
             this.metroToggle1.Checked = true;
             this.metroToggle1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggle1.Location = new System.Drawing.Point(134, 131);
+            this.metroToggle1.Location = new System.Drawing.Point(112, 109);
             this.metroToggle1.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle1.Name = "metroToggle1";
-            this.metroToggle1.Size = new System.Drawing.Size(80, 33);
+            this.metroToggle1.Size = new System.Drawing.Size(80, 29);
             this.metroToggle1.TabIndex = 0;
             this.metroToggle1.Text = "On";
             this.metroToggle1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -84,10 +84,10 @@
             this.metroTile1.CustomBackground = true;
             this.metroTile1.CustomForeColor = true;
             this.metroTile1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTile1.Location = new System.Drawing.Point(50, 115);
+            this.metroTile1.Location = new System.Drawing.Point(42, 96);
             this.metroTile1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(56, 54);
+            this.metroTile1.Size = new System.Drawing.Size(47, 45);
             this.metroTile1.TabIndex = 1;
             this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,10 +96,10 @@
             // 
             // metroTile2
             // 
-            this.metroTile2.Location = new System.Drawing.Point(29, 103);
+            this.metroTile2.Location = new System.Drawing.Point(24, 86);
             this.metroTile2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(224, 138);
+            this.metroTile2.Size = new System.Drawing.Size(187, 115);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTile2.TabIndex = 2;
             // 
@@ -110,10 +110,10 @@
             this.metroTile3.CustomBackground = true;
             this.metroTile3.CustomForeColor = true;
             this.metroTile3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTile3.Location = new System.Drawing.Point(50, 168);
+            this.metroTile3.Location = new System.Drawing.Point(42, 140);
             this.metroTile3.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(60, 67);
+            this.metroTile3.Size = new System.Drawing.Size(50, 56);
             this.metroTile3.TabIndex = 1;
             this.metroTile3.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile3.TileImage")));
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,10 +121,10 @@
             // 
             // metroTile4
             // 
-            this.metroTile4.Location = new System.Drawing.Point(29, 232);
+            this.metroTile4.Location = new System.Drawing.Point(24, 193);
             this.metroTile4.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(224, 120);
+            this.metroTile4.Size = new System.Drawing.Size(187, 100);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTile4.TabIndex = 2;
             // 
@@ -133,10 +133,10 @@
             this.metroToggle4.AutoSize = true;
             this.metroToggle4.Checked = true;
             this.metroToggle4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggle4.Location = new System.Drawing.Point(134, 314);
+            this.metroToggle4.Location = new System.Drawing.Point(112, 262);
             this.metroToggle4.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle4.Name = "metroToggle4";
-            this.metroToggle4.Size = new System.Drawing.Size(80, 33);
+            this.metroToggle4.Size = new System.Drawing.Size(80, 29);
             this.metroToggle4.TabIndex = 0;
             this.metroToggle4.Text = "On";
             this.metroToggle4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -149,10 +149,10 @@
             this.metroTile5.CustomBackground = true;
             this.metroTile5.CustomForeColor = true;
             this.metroTile5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTile5.Location = new System.Drawing.Point(50, 238);
+            this.metroTile5.Location = new System.Drawing.Point(42, 198);
             this.metroTile5.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(56, 54);
+            this.metroTile5.Size = new System.Drawing.Size(47, 45);
             this.metroTile5.TabIndex = 1;
             this.metroTile5.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile5.TileImage")));
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,10 +164,10 @@
             this.metroTile6.CustomBackground = true;
             this.metroTile6.CustomForeColor = true;
             this.metroTile6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTile6.Location = new System.Drawing.Point(50, 290);
+            this.metroTile6.Location = new System.Drawing.Point(42, 242);
             this.metroTile6.Margin = new System.Windows.Forms.Padding(2);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(60, 67);
+            this.metroTile6.Size = new System.Drawing.Size(50, 56);
             this.metroTile6.TabIndex = 1;
             this.metroTile6.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile6.TileImage")));
             this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,10 +176,10 @@
             // metroToggle3
             // 
             this.metroToggle3.AutoSize = true;
-            this.metroToggle3.Location = new System.Drawing.Point(134, 254);
+            this.metroToggle3.Location = new System.Drawing.Point(112, 212);
             this.metroToggle3.Margin = new System.Windows.Forms.Padding(2);
             this.metroToggle3.Name = "metroToggle3";
-            this.metroToggle3.Size = new System.Drawing.Size(80, 33);
+            this.metroToggle3.Size = new System.Drawing.Size(80, 29);
             this.metroToggle3.TabIndex = 0;
             this.metroToggle3.Text = "Off";
             this.metroToggle3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -195,10 +195,10 @@
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.metroTextBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroTextBox1.Location = new System.Drawing.Point(20, 36);
+            this.metroTextBox1.Location = new System.Drawing.Point(17, 30);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(250, 53);
+            this.metroTextBox1.Size = new System.Drawing.Size(208, 44);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTextBox1.TabIndex = 3;
             this.metroTextBox1.Text = "HEEJO\'S SAFEBOX";
@@ -210,12 +210,12 @@
             // metroTextBox2
             // 
             this.metroTextBox2.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.metroTextBox2.Location = new System.Drawing.Point(6, 392);
+            this.metroTextBox2.Location = new System.Drawing.Point(5, 327);
             this.metroTextBox2.Margin = new System.Windows.Forms.Padding(0);
             this.metroTextBox2.Multiline = true;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.metroTextBox2.Size = new System.Drawing.Size(280, 61);
+            this.metroTextBox2.Size = new System.Drawing.Size(233, 51);
             this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTextBox2.TabIndex = 4;
             this.metroTextBox2.Text = "이힁~좋아!♥";
@@ -223,17 +223,17 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.BalloonTipText = "test";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "SAFEBOX";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(256, 7);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroButton1.Location = new System.Drawing.Point(213, 6);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(30, 30);
+            this.metroButton1.Size = new System.Drawing.Size(25, 25);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Black;
             this.metroButton1.TabIndex = 5;
             this.metroButton1.Text = "X";
@@ -242,10 +242,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(290, 458);
+            this.ClientSize = new System.Drawing.Size(242, 382);
             this.ControlBox = false;
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox2);
@@ -262,11 +262,12 @@
             this.Controls.Add(this.metroTile2);
             this.DisplayHeader = false;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(20, 36, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(17, 30, 17, 17);
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

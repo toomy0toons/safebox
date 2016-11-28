@@ -19,7 +19,6 @@ namespace safebox
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         public string Devcontest(string arg)
@@ -31,11 +30,11 @@ namespace safebox
                 process.StartInfo.Arguments = arg;
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
-                process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.Verb = "runas";
 
                 try
                 {
+                    process.StartInfo.CreateNoWindow = true;
                     process.Start();
                 }
                 catch (Exception)
@@ -259,14 +258,17 @@ namespace safebox
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            if (this.WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Normal;
         }        
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             metroToggle3.Checked = false;
-            Application.Exit();
+            this.WindowState = FormWindowState.Minimized;
+            // Application.Exit();
         }
+
     }
     
     public class Calnet
