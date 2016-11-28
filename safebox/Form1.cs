@@ -248,12 +248,14 @@ namespace safebox
         {
             if (metroToggle4.Checked == true)
             {
-                Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                //Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                string a = Devcontest("enable =usb");
                 notifyIcon1.ShowBalloonTip(2000, "WARNING", "USB Storage can be used", ToolTipIcon.Warning);
             }
             else
             {
-                Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+                //Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+                string a = Devcontest("disable =usb");
                 notifyIcon1.ShowBalloonTip(2000, "SAFEBOX", "USB Storage can't be used", ToolTipIcon.Warning);
 
             }
