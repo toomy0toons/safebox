@@ -139,18 +139,16 @@ namespace safebox
             if (parseString.Contains("No matching handles found."))
             {
 
-                notifyIcon1.ShowBalloonTip(2000, "WARNING", "발견되지 않았습니다", ToolTipIcon.Warning);
+                notifyIcon1.ShowBalloonTip(2000, "카메라를 사용중인 프로세스", "감지되지 않았습니다", ToolTipIcon.Info);
             }
             else
             {
                 if (!parseString.Contains(".exe"))
                 {
-                    notifyIcon1.ShowBalloonTip(2000, "WARNING", "발견되지 않았습니다", ToolTipIcon.Warning);
+                    notifyIcon1.ShowBalloonTip(2000, "카메라를 사용중인 프로세스", "감지되지 않았습니다", ToolTipIcon.Info);
                 }
                 else
                 {
-
-                    metroTextBox2.Text = "카메라 사용 감지\n";
                     string[] lines = parseString.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
                     string duple = "";
 
@@ -263,7 +261,6 @@ namespace safebox
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            metroTextBox2.Text = "카메라를 사용하는 앱 검색중...";
             CheckCamera();
         }
 
