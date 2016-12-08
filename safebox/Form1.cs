@@ -25,11 +25,17 @@ namespace safebox
             // Close the form, which closes the application.
             this.Close();
         }
+
+        /* devcon을 실행하는 함수*/
         public string Devcontest(string arg)
         {
-            if (!IsRunAsAdministrator())
+            if (!IsRunAsAdministrator()) 
             {
+                /* 관리자 권한 없을때 관리자 권한 실행 */
                 Process process = new Process();
+
+                /* cmd에서 devcon disable =(하드웨어 설명)은 장치 드라이버 off
+                           devcon enable  =(하드웨어 설명)은 장치 드라이버 on */ 
                 process.StartInfo.FileName = "devcon.exe";
                 process.StartInfo.Arguments = arg;
                 process.StartInfo.UseShellExecute = false;
@@ -40,7 +46,7 @@ namespace safebox
 
                 try
                 {
-                    process.StartInfo.CreateNoWindow = true;
+                    process.StartInfo.CreateNoWindow = true; /* true일 때 관리자 권한으로 실행 */
                     process.Start();
                 }
                 catch (Exception)
@@ -70,7 +76,7 @@ namespace safebox
                 process.StartInfo.RedirectStandardOutput = true;
                 process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                process.StartInfo.Verb = "runas";
+                process.StartInfo.Verb = "runas"; /* cmd 관리자 권한 실행 명렁어 */
 
                 process.Start();
 
@@ -177,6 +183,7 @@ namespace safebox
         }
 
 
+        /* 관리자 권한 부여 함수 */
         private bool IsRunAsAdministrator()
         {
             var wi = System.Security.Principal.WindowsIdentity.GetCurrent();
@@ -200,6 +207,7 @@ namespace safebox
             CheckForIllegalCrossThreadCalls = false;
         }
 
+        /* 웹캠 제어 함수*/
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
             if (this.metroToggle1.Checked == true)
@@ -214,6 +222,7 @@ namespace safebox
             }
         }
 
+        /* 오디오/마이크 제어 함수*/
         private void metroToggle2_CheckedChanged(object sender, EventArgs e)
         {
             if (this.metroToggle2.Checked == true)
@@ -229,6 +238,7 @@ namespace safebox
             }
         }
 
+        /* 네트워크 전송량 체크 함수*/
         private void metroToggle3_CheckedChanged(object sender, EventArgs e)
         {
             Calnet calnett = new Calnet();
@@ -244,6 +254,7 @@ namespace safebox
             }
         }
 
+        /* USB 제어 함수 */
         private void metroToggle4_CheckedChanged(object sender, EventArgs e)
         {
             if (metroToggle4.Checked == true)
@@ -271,12 +282,14 @@ namespace safebox
 
         }
 
+        /* 프로그램 창 켜기 */
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
                 this.WindowState = FormWindowState.Normal;
         }        
 
+        /* 프로그램 창 최소화 */
         private void metroButton1_Click(object sender, EventArgs e)
         {
             metroToggle3.Checked = false;
